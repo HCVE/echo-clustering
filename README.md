@@ -2,4 +2,4 @@
 
 Main notebook: https://nbviewer.jupyter.org/github/HCVE/echo-clustering/blob/master/notebooks/clustering/publish/notebook_clustering.ipynb
 
-> Research Foundation - Flanders has financed the underlying research project. File number: 80568.
+> This research project was supported by the Research Foundation Flanders (FWO grants G0C5319N; 1225021N; 1S07421N).
