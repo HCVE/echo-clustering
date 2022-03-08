@@ -26,7 +26,6 @@ import subprocess
 from abc import ABC
 
 from frozendict import frozendict
-from miceforest import MultipleImputedKernel
 from numpy import linspace
 from pandas import DataFrame
 from pandas import Series
@@ -362,7 +361,7 @@ def get_label_from_config(config):
 
 
 def load_input_data(path=None) -> DataFrame:
-    data_frame = pandas.read_csv(path or "%s/data/data.csv" % get_params('data_folder'))
+    data_frame = pandas.read_csv(path or "%s/data.csv" % get_params('data_folder'))
     data_frame.columns = [column.upper() for column in data_frame.columns]
     return data_frame
 
@@ -899,6 +898,7 @@ def fit_mice_hash(X: DataFrame, iterations: int = 1):
 
 
 def fit_mice_execute(X: DataFrame, iterations: int = 1) -> Any:
+    from miceforest import MultipleImputedKernel
     kernel = MultipleImputedKernel(X, save_all_iterations=True, datasets=1)
     kernel.mice(iterations, verbose=True)
     return kernel

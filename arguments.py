@@ -2,7 +2,7 @@ import argparse
 from typing import Any
 
 data = None
-defaults = {'data_folder': '../cardiovascular-risk-data/', 'fast': False, 'single_core': False}
+defaults = {'data_folder': '/data/echo-clustering-data/', 'fast': False, 'single_core': False}
 
 
 def parse():
